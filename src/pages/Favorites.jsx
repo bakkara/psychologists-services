@@ -1,10 +1,11 @@
+import { Container } from "../components/Container.styled"
 
 
 const Favorites = () => {
   return (
-    <div>
+    <Container>
       Favorites
-    </div>
+    </Container>
   )
 }
 

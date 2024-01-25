@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Container } from '../Container.styled'
 
 const Header = () => {
   return (
-    <div>
+    <Container>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/catalog'>Psycolojists</NavLink>
         <NavLink to='/favorites'>Favorites</NavLink>
-    </div>
+    </Container>
   )
 }
 

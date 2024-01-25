@@ -1,9 +1,10 @@
+import { Container } from "../components/Container.styled"
 
 const Psychologists = () => {
   return (
-    <div>
+    <Container>
       Psychologists
-    </div>
+    </Container>
   )
 }
 
