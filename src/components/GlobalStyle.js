@@ -1,37 +1,37 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-// import InterRegular from '../fonts/Inter-Regular.woff2';
-// import InterMedium from '../fonts/Inter-Medium.woff2';
-import InterBold from '../fonts/Inter-Bold.woff2';
-import InterSemiBold from '../fonts/Inter-SemiBold.woff2';
+import InterRegular from '../fonts/Inter-Regular.ttf';
+import InterMedium from '../fonts/Inter-Medium.ttf';
+import InterBold from '../fonts/Inter-Bold.ttf';
+import InterSemiBold from '../fonts/Inter-SemiBold.ttf';
 
 const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Inter';
         src: local('Inter'),
-        url('../fonts/Inter-Regular.woff2') format('woff2');
+        url(${InterRegular}) format('truetype');
         font-weight: 400;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Inter';
-        src: local('Inter'), url(${require('../fonts/Inter-Regular.woff2')}) format('woff2');
+        src: local('Inter'), url(${InterMedium}) format('truetype');
         font-weight: 500;
         font-style: normal;
     }
 
       @font-face {
         font-family: 'Inter';
-        src: local('Inter'), url(${InterSemiBold}) format('woff2');
+        src: local('Inter'), url(${InterSemiBold}) format('truetype');
         font-weight: 600;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Inter';
-        src: local('Inter'), url(${InterBold}) format('woff2');
+        src: local('Inter'), url(${InterBold}) format('truetype');
         font-weight: 700;
         font-style: normal;
     }
