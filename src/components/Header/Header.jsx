@@ -1,15 +1,23 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { Container } from '../Container.styled'
+import React from 'react';
+
+import { Container } from '../Container.styled';
+import Navigation from '../Navigation/Navigation';
+import { HeaderContainer, HeaderWrap, Logo, LogoDotSpan, LogoSpan } from './Header.styled';
 
 const Header = () => {
   return (
-    <Container>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/catalog'>Psycolojists</NavLink>
-        <NavLink to='/favorites'>Favorites</NavLink>
-    </Container>
-  )
-}
+    <HeaderWrap>
+      <Container>
+        <HeaderContainer>
+        <Logo>
+          <LogoSpan>psychologists</LogoSpan>
+          <LogoDotSpan>.</LogoDotSpan>services
+        </Logo>
+        <Navigation />
+        </HeaderContainer>
+      </Container>
+    </HeaderWrap>
+  );
+};
 
-export default Header
+export default Header;
