@@ -1,10 +1,16 @@
 import React from 'react';
 import mainImg from '../../img/main_img.jpg';
 import {
+  Button,
+  ButtonText,
   LeftPartWelcome,
   MainTitle,
   MainTitleSpan,
   PsyBlock,
+  PsyBlockNumber,
+  PsyBlockSquare,
+  PsyBlockText,
+  PsyBlockTextDiv,
   QuestionBlock,
   RightPartWelcome,
   UsersBlock,
@@ -14,7 +20,8 @@ import {
 } from './Welcome.styled';
 
 const Welcome = () => {
-  return (
+  
+return (
     <WelcomeWrap>
       <LeftPartWelcome>
         <MainTitle>
@@ -25,14 +32,22 @@ const Welcome = () => {
           We help you to reveal your potential, overcome challenges and find a
           guide in your own life with the help of our experienced psychologists.
         </WelcomeText>
-        <button type="button">Get started</button>
+        <Button to={'/psychologists'} type="button">
+          <ButtonText>Get started</ButtonText>
+        </Button>
       </LeftPartWelcome>
       <RightPartWelcome>
         <WelcomeImg src={mainImg} alt="main_img" /> 
         {/* Не забути зробити оптимізацію картинки */}
         <QuestionBlock></QuestionBlock>
         <UsersBlock></UsersBlock>
-        <PsyBlock></PsyBlock>
+        <PsyBlock>
+          <PsyBlockSquare></PsyBlockSquare>
+          <PsyBlockTextDiv>
+            <PsyBlockText>Experienced psychologists</PsyBlockText>
+            <PsyBlockNumber>15,000</PsyBlockNumber>
+          </PsyBlockTextDiv>
+        </PsyBlock>
       </RightPartWelcome>
     </WelcomeWrap>
   );

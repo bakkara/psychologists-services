@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const WelcomeWrap = styled.div`
     display: flex;
@@ -75,4 +76,43 @@ export const PsyBlock = styled.div`
     bottom: 75px;
     left: -102px;
     padding: 32px;
+    display: flex;
+    gap: 16px;
+`
+export const PsyBlockSquare = styled.div`
+    width: 54px;
+    height: 54px;
+    border-radius: 13px;
+    background: var(--white-color);
+`
+
+export const PsyBlockText = styled.p`
+    color: rgba(251, 251, 251, 0.50);
+    font-size: 14px;
+`
+export const PsyBlockNumber = styled.p`
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 700;
+`
+
+export const PsyBlockTextDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`
+
+export const Button = styled(Link)`
+    display: inline-block;
+    padding: 18px 50px;
+    border-radius: 30px;
+    background: var(--green-color);
+`
+
+export const ButtonText = styled.p`
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
 `
