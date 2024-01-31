@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/psychologists-services/static/css/main.31134e19.css",
-    "main.js": "/psychologists-services/static/js/main.a834ddfe.js",
-    "static/js/550.01beb683.chunk.js": "/psychologists-services/static/js/550.01beb683.chunk.js",
+    "main.js": "/psychologists-services/static/js/main.0c367611.js",
+    "static/js/853.124f4d70.chunk.js": "/psychologists-services/static/js/853.124f4d70.chunk.js",
     "static/js/898.4d8cb529.chunk.js": "/psychologists-services/static/js/898.4d8cb529.chunk.js",
     "static/js/395.c0b7f6fa.chunk.js": "/psychologists-services/static/js/395.c0b7f6fa.chunk.js",
     "static/media/Inter-Bold.ttf": "/psychologists-services/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
@@ -10,15 +10,16 @@
     "static/media/Inter-Medium.ttf": "/psychologists-services/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/psychologists-services/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/main_img.jpg": "/psychologists-services/static/media/main_img.2a32df9e958cb310e000.jpg",
+    "static/media/icons.svg": "/psychologists-services/static/media/icons.097174130844282b536a9c167c63806c.svg",
     "index.html": "/psychologists-services/index.html",
     "main.31134e19.css.map": "/psychologists-services/static/css/main.31134e19.css.map",
-    "main.a834ddfe.js.map": "/psychologists-services/static/js/main.a834ddfe.js.map",
-    "550.01beb683.chunk.js.map": "/psychologists-services/static/js/550.01beb683.chunk.js.map",
+    "main.0c367611.js.map": "/psychologists-services/static/js/main.0c367611.js.map",
+    "853.124f4d70.chunk.js.map": "/psychologists-services/static/js/853.124f4d70.chunk.js.map",
     "898.4d8cb529.chunk.js.map": "/psychologists-services/static/js/898.4d8cb529.chunk.js.map",
     "395.c0b7f6fa.chunk.js.map": "/psychologists-services/static/js/395.c0b7f6fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31134e19.css",
-    "static/js/main.a834ddfe.js"
+    "static/js/main.0c367611.js"
   ]
 }
