@@ -133,6 +133,11 @@ export const Button = styled(Link)`
     justify-content: center;
     align-items: center;
     width: 246px;
+    &:hover,
+    &:focus,
+    &:active {
+        background: var(--hover-color);
+    }
 `
 
 export const ButtonText = styled.p`

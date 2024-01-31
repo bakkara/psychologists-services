@@ -7,7 +7,7 @@ export const HeaderWrap = styled.header`
 `
 export const HeaderContainer = styled.header`
     display: flex;
-    padding: 32px 0;
+    padding: 30px 0;
     align-items: center;
 `
 
