@@ -1,5 +1,6 @@
 import React from 'react';
 import mainImg from '../../img/main_img.jpg';
+import icons from '../../img/icons.svg';
 import {
   Button,
   ButtonText,
@@ -13,6 +14,9 @@ import {
   PsyBlockTextDiv,
   QuestionBlock,
   RightPartWelcome,
+  SvgCheck,
+  SvgQuestion,
+  SvgUsers,
   UsersBlock,
   WelcomeImg,
   WelcomeText,
@@ -34,15 +38,30 @@ return (
         </WelcomeText>
         <Button to={'/psychologists'} type="button">
           <ButtonText>Get started</ButtonText>
+          <SvgQuestion>
+            <use href={`${icons}#icon-arrow`}></use>
+          </SvgQuestion>
         </Button>
       </LeftPartWelcome>
       <RightPartWelcome>
         <WelcomeImg src={mainImg} alt="main_img" /> 
         {/* Не забути зробити оптимізацію картинки */}
-        <QuestionBlock></QuestionBlock>
-        <UsersBlock></UsersBlock>
+        <QuestionBlock>
+          <SvgQuestion>
+            <use href={`${icons}#icon-question`}></use>
+          </SvgQuestion>
+        </QuestionBlock>
+        <UsersBlock>
+        <SvgUsers>
+            <use href={`${icons}#icon-mdi_users`}></use>
+          </SvgUsers>
+        </UsersBlock>
         <PsyBlock>
-          <PsyBlockSquare></PsyBlockSquare>
+          <PsyBlockSquare>
+          <SvgCheck>
+            <use href={`${icons}#icon-check`}></use>
+          </SvgCheck>
+          </PsyBlockSquare>
           <PsyBlockTextDiv>
             <PsyBlockText>Experienced psychologists</PsyBlockText>
             <PsyBlockNumber>15,000</PsyBlockNumber>

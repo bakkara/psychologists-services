@@ -52,7 +52,24 @@ export const QuestionBlock = styled.div`
     position: absolute;
     top: 185px;
     left: -30px;
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const SvgQuestion = styled.svg`
+    width: 20px;
+    height: 17px;
+    transform: rotate(15deg);
+`
+export const SvgUsers = styled.svg`
+    width: 30px;
+    height: 30px;
+    transform: rotate(-15deg);
+`
+export const SvgCheck = styled.svg`
+    width: 30px;
+    height: 30px;
+    fill: var(--green-color)
 `
 
 export const UsersBlock = styled.div`
@@ -64,7 +81,9 @@ export const UsersBlock = styled.div`
     position: absolute;
     top: 38px;
     right: -40px;
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const PsyBlock = styled.div`
@@ -84,6 +103,9 @@ export const PsyBlockSquare = styled.div`
     height: 54px;
     border-radius: 13px;
     background: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const PsyBlockText = styled.p`
@@ -103,10 +125,14 @@ export const PsyBlockTextDiv = styled.div`
 `
 
 export const Button = styled(Link)`
-    display: inline-block;
+    display: flex;
+    gap: 18px;
     padding: 18px 50px;
     border-radius: 30px;
     background: var(--green-color);
+    justify-content: center;
+    align-items: center;
+    width: 246px;
 `
 
 export const ButtonText = styled.p`
