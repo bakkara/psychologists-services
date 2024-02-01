@@ -1,9 +1,10 @@
 import { Container } from "../components/Container.styled"
+import PsychologistCard from "../components/Psychologist/PsychologistCard"
 
 const Psychologists = () => {
   return (
     <Container>
-      Psychologists
+      <PsychologistCard/>
     </Container>
   )
 }
