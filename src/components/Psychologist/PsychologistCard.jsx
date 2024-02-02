@@ -1,4 +1,4 @@
-import { AvatarWrap, DescriptionWrap, HeadDescriptionWrap, PsyText, PsycWrap, RatingPriceBlock, RatingPriceText, RatingPriceTextSpan, SvgHeart, SvgStar } from "./Psychologist.styled"
+import { AvatarWrap, DescriptionWrap, HeadDescriptionWrap, PsyText, PsycWrap, PsychologistName, RatingPriceBlock, RatingPriceText, RatingPriceTextSpan, SkillsBlock, SkillsBlockText, SkillsSpan, SvgHeart, SvgStar } from "./PsychologistCard.styled"
 import icons from '../../img/icons.svg';
 
 const PsychologistCard = () => {
@@ -19,6 +19,14 @@ const PsychologistCard = () => {
                 <use href={`${icons}#icon-heart`}></use>
               </SvgHeart>
             </HeadDescriptionWrap> 
+            <PsychologistName>Dr. Mark Thompson</PsychologistName>
+            <SkillsBlock>
+              <SkillsBlockText><SkillsSpan>Experience: </SkillsSpan> 20 years</SkillsBlockText>
+              <SkillsBlockText><SkillsSpan>License: </SkillsSpan> Licensed Psychologist (License #54321)</SkillsBlockText>
+              <SkillsBlockText><SkillsSpan>Specialization: </SkillsSpan>  Relationship Counseling</SkillsBlockText>
+              <SkillsBlockText><SkillsSpan>Initial_consultation: </SkillsSpan> Free 60-minute initial consultation</SkillsBlockText>
+            </SkillsBlock>
+            
         </DescriptionWrap>    
     </PsycWrap>
   )

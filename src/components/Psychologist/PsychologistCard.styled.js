@@ -77,5 +77,33 @@ export const SvgHeart = styled.svg`
     fill: none;
     stroke: rgb(25, 26, 21);
 `
+export const PsychologistName = styled.p`
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+`
+export const SkillsBlock = styled.div`
+    display: flex;
+    gap: 8px 4px;
+    flex-wrap: wrap;
+    margin-bottom: 24x;
+`
 
+export const SkillsBlockText = styled.p`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px 8px 16px;
+    border-radius: 24px;
+    background: rgb(243, 243, 243);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+`
+export const SkillsSpan = styled.span`
+    color: var(--black-light-color);
+`
 
