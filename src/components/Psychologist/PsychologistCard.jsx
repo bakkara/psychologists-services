@@ -1,4 +1,4 @@
-import { AvatarWrap, DescriptionWrap, HeadDescriptionWrap, PsyText, PsycWrap, PsychologistName, RatingPriceBlock, RatingPriceText, RatingPriceTextSpan, SkillsBlock, SkillsBlockText, SkillsSpan, SvgHeart, SvgStar } from "./PsychologistCard.styled"
+import { AvatarWrap, DescriptionText, DescriptionWrap, HeadDescriptionWrap, PsyText, PsycWrap, PsychologistName, RatingPriceBlock, RatingPriceText, RatingPriceTextSpan, ReadMoreButton, SkillsBlock, SkillsBlockText, SkillsSpan, SvgHeart, SvgStar } from "./PsychologistCard.styled"
 import icons from '../../img/icons.svg';
 
 const PsychologistCard = () => {
@@ -26,7 +26,10 @@ const PsychologistCard = () => {
               <SkillsBlockText><SkillsSpan>Specialization: </SkillsSpan>  Relationship Counseling</SkillsBlockText>
               <SkillsBlockText><SkillsSpan>Initial_consultation: </SkillsSpan> Free 60-minute initial consultation</SkillsBlockText>
             </SkillsBlock>
-            
+            <DescriptionText>
+            Dr. Mark Thompson is a highly experienced and licensed psychologist specializing in Relationship Counseling. With 20 years of practice, he has helped individuals navigate and improve their relationships, leading to better well-being and personal growth. Dr. Thompson is known for his expertise and ability to provide invaluable insights to his clients. His approach to therapy is tailored to each individual's unique needs, ensuring a supportive and effective counseling experience.
+            </DescriptionText>
+            <ReadMoreButton type="button">Read more</ReadMoreButton>
         </DescriptionWrap>    
     </PsycWrap>
   )

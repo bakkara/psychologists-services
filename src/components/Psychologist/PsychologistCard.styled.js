@@ -87,7 +87,7 @@ export const SkillsBlock = styled.div`
     display: flex;
     gap: 8px 4px;
     flex-wrap: wrap;
-    margin-bottom: 24x;
+    margin-bottom: 24px;
 `
 
 export const SkillsBlockText = styled.p`
@@ -106,4 +106,17 @@ export const SkillsBlockText = styled.p`
 export const SkillsSpan = styled.span`
     color: var(--black-light-color);
 `
+export const DescriptionText = styled.p`
+    color: rgba(25, 26, 21, 0.5);
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-bottom: 14px;
+`
+export const ReadMoreButton = styled.button`
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
 
+`
