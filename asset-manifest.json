@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/psychologists-services/static/css/main.31134e19.css",
-    "main.js": "/psychologists-services/static/js/main.ba74f903.js",
-    "static/js/550.939f2459.chunk.js": "/psychologists-services/static/js/550.939f2459.chunk.js",
-    "static/js/405.14a635f7.chunk.js": "/psychologists-services/static/js/405.14a635f7.chunk.js",
+    "main.js": "/psychologists-services/static/js/main.72eb852f.js",
+    "static/js/550.cf785fee.chunk.js": "/psychologists-services/static/js/550.cf785fee.chunk.js",
+    "static/js/405.91b2a7d1.chunk.js": "/psychologists-services/static/js/405.91b2a7d1.chunk.js",
     "static/js/395.c0b7f6fa.chunk.js": "/psychologists-services/static/js/395.c0b7f6fa.chunk.js",
     "static/media/Inter-Bold.ttf": "/psychologists-services/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
     "static/media/Inter-SemiBold.ttf": "/psychologists-services/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
@@ -13,13 +13,13 @@
     "static/media/icons.svg": "/psychologists-services/static/media/icons.097174130844282b536a9c167c63806c.svg",
     "index.html": "/psychologists-services/index.html",
     "main.31134e19.css.map": "/psychologists-services/static/css/main.31134e19.css.map",
-    "main.ba74f903.js.map": "/psychologists-services/static/js/main.ba74f903.js.map",
-    "550.939f2459.chunk.js.map": "/psychologists-services/static/js/550.939f2459.chunk.js.map",
-    "405.14a635f7.chunk.js.map": "/psychologists-services/static/js/405.14a635f7.chunk.js.map",
+    "main.72eb852f.js.map": "/psychologists-services/static/js/main.72eb852f.js.map",
+    "550.cf785fee.chunk.js.map": "/psychologists-services/static/js/550.cf785fee.chunk.js.map",
+    "405.91b2a7d1.chunk.js.map": "/psychologists-services/static/js/405.91b2a7d1.chunk.js.map",
     "395.c0b7f6fa.chunk.js.map": "/psychologists-services/static/js/395.c0b7f6fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31134e19.css",
-    "static/js/main.ba74f903.js"
+    "static/js/main.72eb852f.js"
   ]
 }
