@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
 
-
+export const TextRegistration = styled.p`
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    line-height: 1.25;
+    color: var(--normal-color);
+    margin-bottom: 40px;
+`
 
 export const Label = styled.label`
   color: var(--black-color);

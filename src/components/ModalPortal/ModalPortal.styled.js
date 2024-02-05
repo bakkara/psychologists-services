@@ -51,6 +51,7 @@ export const ModalWindowStyled = styled.div`
   color: var(--black-color);
   background-color: var(--white-color);
   border-radius: 30px;
+  position: relative;
 
   @media only screen and (min-width: 768px) {
     width: 566px;
@@ -59,17 +60,13 @@ export const ModalWindowStyled = styled.div`
 
 `;
 
-export const ModalTitleWrapStyled = styled.div`
-  display: flex;
-  margin-bottom: 20px;
-  justify-content: space-between;
-  align-items: center;
-
-  & > h2 {
+export const ModalTitleWrapStyled = styled.h2`
+  
     font-size: 40px;
     font-weight: 500;
-    line-height: 1.23;
-  }
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
 `;
 
 export const CloseButtonStyled = styled.button`
@@ -78,6 +75,9 @@ export const CloseButtonStyled = styled.button`
   align-items: center;
   background-color: inherit;
   transition: all 300ms ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   &:hover {
     transform: scale(1.3);
     > svg {

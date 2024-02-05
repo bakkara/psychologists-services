@@ -33,19 +33,17 @@ export const ModalPortal = ({ title, children, onClose }) => {
     <ModalWrapStyled onClick={handleClose}>
       <div name="scroll-container">
         <ModalWindowStyled>
-          <ModalTitleWrapStyled>
-            <h2>{title}</h2>
-            <CloseButtonStyled
-              type="button"
-              onClick={() => {
-                onClose();
-              }}
-            >
-              <SvgClose>
-                <use href={`${icons}#icon-exit`}></use>
-              </SvgClose>
-            </CloseButtonStyled>
-          </ModalTitleWrapStyled>
+          <CloseButtonStyled
+            type="button"
+            onClick={() => {
+              onClose();
+            }}
+          >
+            <SvgClose>
+              <use href={`${icons}#icon-exit`}></use>
+            </SvgClose>
+          </CloseButtonStyled>
+          <ModalTitleWrapStyled>{title}</ModalTitleWrapStyled>
           {children}
         </ModalWindowStyled>
       </div>
