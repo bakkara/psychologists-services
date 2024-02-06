@@ -27,6 +27,27 @@ export const LogoDotSpan = styled.span`
     color: var(--green-color);
     font-weight: 500;
 `
+export const ButtonLog = styled.button`
+    display: flex;
+    padding: 14px 39px;
+    border-radius: 30px;
+    background: var(--white-color);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(25, 26, 21, 0.2);
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    margin-right: 8px;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background: var(--hover-color);
+        }
+`
 
 export const ButtonReg = styled.button`
     display: flex;

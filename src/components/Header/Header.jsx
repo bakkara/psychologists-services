@@ -2,14 +2,23 @@ import React, { useState } from 'react';
 
 import { Container } from '../Container.styled';
 import Navigation from '../Navigation/Navigation';
-import { ButtonReg, HeaderContainer, HeaderWrap, Logo, LogoDotSpan, LogoSpan } from './Header.styled';
+import { ButtonLog, ButtonReg, HeaderContainer, HeaderWrap, Logo, LogoDotSpan, LogoSpan } from './Header.styled';
 import { ModalPortal } from '../ModalPortal/ModalPortal';
 import PopUpRegistration from '../PopUpRegistration/PopUpRegistration';
+import PopUpLogIn from '../PopUpLogIn/PopUpLogin';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = e => {
+  const [title, setIsTitle] = useState('Registration');
+
+
+  const toggleModal = () => {
     setIsOpen(isOpen => !isOpen);
+  };
+
+  const onClickBtn = title => {
+    setIsTitle(title);
+    toggleModal();
   };
 
   return (
@@ -21,10 +30,16 @@ const Header = () => {
           <LogoDotSpan>.</LogoDotSpan>services
         </Logo>
         <Navigation />
-        <ButtonReg type="button" onClick={toggleModal}>Registration</ButtonReg>
+        <ButtonLog type="button" onClick={() => onClickBtn('Log In')}>Log In</ButtonLog>
+        <ButtonReg type="button" onClick={() => onClickBtn('Registration')}>Registration</ButtonReg>
         {isOpen && (
-        <ModalPortal title="Registration" onClose={toggleModal}>
+        <ModalPortal title={title} onClose={toggleModal}>
+          {title === 'Log In' ? (
+            <PopUpLogIn onClose={toggleModal}/>
+          ) : (
             <PopUpRegistration onClose={toggleModal}/>
+          )}
+
         </ModalPortal>
       )}
         </HeaderContainer>
