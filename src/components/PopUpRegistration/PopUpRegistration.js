@@ -1,4 +1,5 @@
 import { ErrorMessage, Form, Formik } from 'formik';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import icons from '../../img/icons.svg';
 import * as Yup from 'yup';
 import {
@@ -11,6 +12,8 @@ import {
   TextRegistration,
 } from './PopUpRegistration.styled';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/auth/userSlice';
 
 export const validateSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -22,14 +25,30 @@ export const validateSchema = Yup.object().shape({
 });
 
 const PopUpRegistration = ({ onClose }) => {
+
+
   const initialValues = {
     name: '',
     email: '',
     password: '',
   };
+
+  const dispatch = useDispatch();
+  
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async values => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, values.email, values.password)
+        .then(({user}) => {
+            console.log(user)
+            dispatch(setUser({
+                email: user.email,
+                token: user.accessToken,
+                id: user.uid,
+            }))
+        })
+        .catch(console.error);
     onClose();
   };
   const togglePasswordVisibility = field => {

@@ -1,4 +1,5 @@
 import { ErrorMessage, Form, Formik } from 'formik';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import icons from '../../img/icons.svg';
 import * as Yup from 'yup';
 import {
@@ -11,6 +12,7 @@ import {
   TextRegistration,
 } from '../PopUpRegistration/PopUpRegistration.styled';
 import { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 
 export const validateSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -22,13 +24,19 @@ export const validateSchema = Yup.object().shape({
 });
 
 const PopUpLogIn = ({ onClose }) => {
+
   const initialValues = {
     email: '',
     password: '',
   };
   const [showPassword, setShowPassword] = useState(false);
+//   const dispatch = useDispatch();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async values => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, values.email, values.password)
+        .then(console.log('login'))
+        .catch(console.error);
     onClose();
   };
 
