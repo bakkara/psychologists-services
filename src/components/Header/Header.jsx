@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 
 import { Container } from '../Container.styled';
 import Navigation from '../Navigation/Navigation';
-import { ButtonLog, ButtonReg, HeaderContainer, HeaderWrap, Logo, LogoDotSpan, LogoSpan } from './Header.styled';
+import { ButtonLog, ButtonReg, HeaderContainer, HeaderWrap, Logo, LogoDotSpan, LogoSpan, UserMenu } from './Header.styled';
 import { ModalPortal } from '../ModalPortal/ModalPortal';
 import PopUpRegistration from '../PopUpRegistration/PopUpRegistration';
 import PopUpLogIn from '../PopUpLogIn/PopUpLogin';
+import { useAuth } from '../../helpers/hooks/useAuth';
+import { useDispatch } from 'react-redux';
+import { removeUser } from '../../redux/auth/userSlice';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setIsTitle] = useState('Registration');
-
+  const { isAuth } = useAuth();
+  const dispatch = useDispatch();
 
   const toggleModal = () => {
     setIsOpen(isOpen => !isOpen);
@@ -30,8 +34,14 @@ const Header = () => {
           <LogoDotSpan>.</LogoDotSpan>services
         </Logo>
         <Navigation />
-        <ButtonLog type="button" onClick={() => onClickBtn('Log In')}>Log In</ButtonLog>
-        <ButtonReg type="button" onClick={() => onClickBtn('Registration')}>Registration</ButtonReg>
+        { isAuth ? 
+          <UserMenu>
+            <ButtonLog type="button" onClick={() => onClickBtn('Log In')}>Log In</ButtonLog>
+            <ButtonReg type="button" onClick={() => onClickBtn('Registration')}>Registration</ButtonReg>
+          </UserMenu> :
+            <ButtonLog type="button" onClick={() => dispatch(removeUser())}>Log Out</ButtonLog>
+        }
+
         {isOpen && (
         <ModalPortal title={title} onClose={toggleModal}>
           {title === 'Log In' ? (

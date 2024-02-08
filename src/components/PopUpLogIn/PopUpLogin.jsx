@@ -12,7 +12,8 @@ import {
   TextRegistration,
 } from '../PopUpRegistration/PopUpRegistration.styled';
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/auth/userSlice';
 
 export const validateSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -29,17 +30,24 @@ const PopUpLogIn = ({ onClose }) => {
     email: '',
     password: '',
   };
+
   const [showPassword, setShowPassword] = useState(false);
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleSubmit = async values => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, values.email, values.password)
-        .then(console.log('login'))
+        .then(({user}) => {
+            console.log(user)
+            dispatch(setUser({
+                email: user.email,
+                token: user.accessToken,
+                id: user.uid,
+            }))
+        })
         .catch(console.error);
     onClose();
   };
-
   const togglePasswordVisibility = field => {
     if (field === 'password') {
       setShowPassword(!showPassword);
@@ -55,10 +63,10 @@ const PopUpLogIn = ({ onClose }) => {
       <Formik
         initialValues={initialValues}
         validationSchema={validateSchema}
-        onSubmit={handleSubmit}
+        onSubmit={() => {handleSubmit() }}
       >
         {({ isSubmitting, errors, touched, values }) => (
-          <Form>
+          <Form onSubmit={() => {handleSubmit(values) }}>
             <Label>
               <StyledField
                 type="email"

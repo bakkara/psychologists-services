@@ -40,7 +40,6 @@ export const ButtonLog = styled.button`
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.2px;
-    margin-right: 8px;
     
         &:hover,
         &:focus,
@@ -69,4 +68,9 @@ export const ButtonReg = styled.button`
         &:active {
             background: var(--hover-color);
         }
+`
+
+export const UserMenu = styled.div`
+    display: flex;
+    gap: 8px;
 `
